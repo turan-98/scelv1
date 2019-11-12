@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Cadastrar Livro</title>
+<title>Cadastrar Aluno</title>
 <script type="text/javascript">
 	function consulta() {
 		window.open("consulta");
@@ -26,48 +26,46 @@
 	<div class="container my-5">
 	<br/>
 	
-		<h3>Cadastrar Livro</h3>
+		<h3>Cadastrar Aluno</h3>
 		<div class="card">
 			<div class="card-body">
 				<div class="col-md-8">
-					<form action="#" th:action="@{/livros/save}" th:object="${livro}" 	method="post">
+					<form action="#" th:action="@{/alunos/save}" th:object="${aluno}" 	method="post">
 						<div class="row">
 
 							<div class="form-group col-md-4">
-								<label for="isbn" class="col-form-label">ISBN</label> 
-								<input type="text" th:field="*{isbn}" class="form-control" id="isbn" placeholder="isbn"> 
-								<span th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}" class="text-danger"> </span>
+								<label for="ra" class="col-form-label">RA</label> 
+								<input type="text" th:field="*{ra}" class="form-control" id="ra" placeholder="ra"> 
+								<span th:if="${#fields.hasErrors('ra')}" th:errors="*{ra}" class="text-danger"> </span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group col-md-8">
-								<label for="autor" class="col-form-label">Autor</label> <input
-									type="text" th:field="*{autor}" class="form-control" id="autor"
-									placeholder="Autor"> <span
-									th:if="${#fields.hasErrors('autor')}" th:errors="*{autor}"
+								<label for="nome" class="col-form-label">Nome</label> <input
+									type="text" th:field="*{nome}" class="form-control" id="nome"
+									placeholder="Nome"> <span
+									th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
 									class="text-danger"> </span>
 							</div>
 							</div>
 						<div class="row">	
 							<div class="form-group col-md-8">
-								<label for="titulo" class="col-form-label">Titulo</label> <input
-									type="text" th:field="*{titulo}" class="form-control"
-									id="titulo" placeholder="Titulo"> <span
-									th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}"
+								<label for="email" class="col-form-label">Titulo</label> <input
+									type="text" th:field="*{email}" class="form-control"
+									id="email" placeholder="Email"> <span
+									th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
 									class="text-danger"></span>
 							</div>
 
 
 							<div class="form-group col-md-8">
-								<input type="submit" class="btn btn-primary" value="Cadastrar Livro"> 
-								<input type="button" class="btn btn-primary" value="Consultar Livro" onclick="consulta();">
+								<input type="submit" class="btn btn-primary" value="Cadastrar Aluno"> 
+								<input type="button" class="btn btn-primary" value="Consultar Aluno" onclick="consulta();">
 							</div>
 						
 						</div>
 
 					</form>
-					<!-- chama o alert -->
-						<div th:replace="fragments/alert"></div>
 				</div>
 			</div>
 		</div>
